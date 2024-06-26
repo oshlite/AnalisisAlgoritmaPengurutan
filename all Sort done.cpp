@@ -113,3 +113,10 @@ vector<int> buatDataTerbalik(int n){
     return data;
 }
 
+void cetakAtas(const string& kondisi){
+    cout<<setw(20)<<"Algoritma"<<setw(20)<<"Kompleksitas Waktu"
+        <<setw(15)<<"N=10"<<setw(15)<<"N=100"
+        <<setw(15)<<"N=500"<<setw(15)<<"N=1000"
+        <<setw(15)<<"N=10000"<<endl;
+}
+
