@@ -79,3 +79,11 @@ int partition(vector<int>& arr,int rendah,int tinggi){
     return i+1;
 }
 
+void Quick(vector<int>& arr,int rendah,int tinggi){
+    if(rendah<tinggi){
+        int pi=partition(arr,rendah,tinggi);
+        Quick(arr,rendah,pi-1);
+        Quick(arr,pi+1,tinggi);
+    }
+}
+
