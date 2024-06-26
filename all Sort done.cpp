@@ -87,3 +87,11 @@ void Quick(vector<int>& arr,int rendah,int tinggi){
     }
 }
 
+long long ukurWaktunya(void(*fungsiSort)(vector<int>&),vector<int>& arr){
+    auto mulai=chrono::high_resolution_clock::now();
+    fungsiSort(arr);
+    auto selesai=chrono::high_resolution_clock::now();
+    chrono::duration<double,micro> durasi=selesai-mulai;
+    return durasi.count();
+}
+
