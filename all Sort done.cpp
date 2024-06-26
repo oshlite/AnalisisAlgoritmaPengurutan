@@ -60,3 +60,11 @@ void merge(vector<int>& arr,int kiri,int tengah,int kanan){
     }
 }
 
+void Merge(vector<int>& arr,int kiri,int kanan){
+    if(kiri>=kanan) return;
+    int tengah=kiri+(kanan-kiri)/2;
+    Merge(arr,kiri,tengah);
+    Merge(arr,tengah+1,kanan);
+    merge(arr,kiri,tengah,kanan);
+}
+
