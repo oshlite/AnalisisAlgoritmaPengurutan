@@ -101,3 +101,9 @@ vector<int> buatDataAcak(int n){
     return data;
 }
 
+vector<int> buatDataTerurut(int n){
+    vector<int> data(n);
+    iota(data.begin(),data.end(),1);
+    return data;
+}
+
