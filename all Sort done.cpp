@@ -141,4 +141,15 @@ int main(){
     vector<string> kondisi={"Acak","Terurut","Terbalik"};
     vector<vector<int>(*)(int)> generatorData={buatDataAcak,buatDataTerurut,buatDataTerbalik};
 
-  
+    for(size_t indexKondisi=0; indexKondisi<kondisi.size(); ++indexKondisi){
+        cout<<"Pengujian Algoritma Pengurutan/Sorting Data: "<<kondisi[indexKondisi]<<endl;
+        cetakAtas(kondisi[indexKondisi]);
+        for(size_t i=0; i<algoritma.size(); i++){
+            vector<long long> waktu;
+            for(int size : ukuran){
+                vector<int> data=generatorData[indexKondisi](size);
+                waktu.push_back(ukurWaktunya(fungsiSort[i],data));
+            }cetakBar(algoritma[i],kompleksitas[i],waktu);
+        }
+    }return 0;
+}
