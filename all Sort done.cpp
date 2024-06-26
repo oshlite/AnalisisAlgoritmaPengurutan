@@ -120,3 +120,12 @@ void cetakAtas(const string& kondisi){
         <<setw(15)<<"N=10000"<<endl;
 }
 
+void cetakBar(const string& nama,const string& kompleksitas,
+                const vector<long long>& waktu){
+    cout<<setw(20)<<nama<<setw(20)<<kompleksitas;
+    for(auto wkt : waktu){
+        cout<<setw(15)<<wkt;
+    }
+    cout<<endl;
+}
+
