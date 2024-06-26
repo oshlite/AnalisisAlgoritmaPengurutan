@@ -40,3 +40,23 @@ void Selection(vector<int>& arr){
     }
 }
 
+void merge(vector<int>& arr,int kiri,int tengah,int kanan){
+    int n1=tengah-kiri+1;
+    int n2=kanan-tengah;
+    vector<int> Kiri(n1),Kanan(n2);
+    for(int i=0; i<n1; i++) Kiri[i]=arr[kiri+i];
+    for(int i=0; i<n2; i++) Kanan[i]=arr[tengah+1+i];
+    int i=0,j=0,k=kiri;
+    while(i<n1 && j<n2){
+        if(Kiri[i] <= Kanan[j]){
+            arr[k]=Kiri[i]; i++;
+        }else{
+            arr[k]=Kanan[j]; j++;
+        }k++;
+    }while(i<n1){
+        arr[k]=Kiri[i]; i++; k++;
+    }while(j<n2){
+        arr[k]=Kanan[j]; j++; k++;
+    }
+}
+
