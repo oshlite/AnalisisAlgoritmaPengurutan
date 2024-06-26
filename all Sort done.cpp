@@ -115,9 +115,9 @@ vector<int> buatDataTerbalik(int n){
 
 void cetakAtas(const string& kondisi){
     cout<<setw(20)<<"Algoritma"<<setw(20)<<"Kompleksitas Waktu"
-        <<setw(15)<<"N=10"<<setw(15)<<"N=100"
-        <<setw(15)<<"N=500"<<setw(15)<<"N=1000"
-        <<setw(15)<<"N=10000"<<endl;
+        <<setw(15)<<"N=10000"<<setw(15)<<"N=1000"
+        <<setw(15)<<"N=500"<<setw(15)<<"N=100"
+        <<setw(15)<<"N=10"<<endl;
 }
 
 void cetakBar(const string& nama,const string& kompleksitas,
@@ -130,7 +130,7 @@ void cetakBar(const string& nama,const string& kompleksitas,
 }
 
 int main(){
-    vector<int> ukuran={10,100,500,1000,10000};
+    vector<int> ukuran={10000,1000,500,100,10};
     vector<string> algoritma={"Bubble Sort","Insertion Sort","Selection Sort","Merge Sort","Quick Sort"};
     vector<string> kompleksitas={"O(n^2)","O(n^2)","O(n^2)","O(n log n)","O(n log n)"};
     vector<void(*)(vector<int>&)> fungsiSort={
