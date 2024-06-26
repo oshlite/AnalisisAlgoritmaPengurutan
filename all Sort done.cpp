@@ -129,3 +129,16 @@ void cetakBar(const string& nama,const string& kompleksitas,
     cout<<endl;
 }
 
+int main(){
+    vector<int> ukuran={10,100,500,1000,10000};
+    vector<string> algoritma={"Bubble Sort","Insertion Sort","Selection Sort","Merge Sort","Quick Sort"};
+    vector<string> kompleksitas={"O(n^2)","O(n^2)","O(n^2)","O(n log n)","O(n log n)"};
+    vector<void(*)(vector<int>&)> fungsiSort={
+        Bubble,Insertion,Selection,
+        [](vector<int>& arr){Merge(arr,0,arr.size()-1);},
+        [](vector<int>& arr){Quick(arr,0,arr.size()-1);}
+    };
+    vector<string> kondisi={"Acak","Terurut","Terbalik"};
+    vector<vector<int>(*)(int)> generatorData={buatDataAcak,buatDataTerurut,buatDataTerbalik};
+
+  
