@@ -95,3 +95,9 @@ long long ukurWaktunya(void(*fungsiSort)(vector<int>&),vector<int>& arr){
     return durasi.count();
 }
 
+vector<int> buatDataAcak(int n){
+    vector<int> data(n);
+    generate(data.begin(),data.end(),rand);
+    return data;
+}
+
