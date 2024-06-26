@@ -68,3 +68,14 @@ void Merge(vector<int>& arr,int kiri,int kanan){
     merge(arr,kiri,tengah,kanan);
 }
 
+int partition(vector<int>& arr,int rendah,int tinggi){
+    int pivot=arr[tinggi];
+    int i=rendah-1;
+    for(int j=rendah; j<tinggi; j++){
+        if(arr[j]<pivot){ i++;
+            swap(arr[i],arr[j]);
+        }
+    }swap(arr[i+1],arr[tinggi]);
+    return i+1;
+}
+
