@@ -107,3 +107,9 @@ vector<int> buatDataTerurut(int n){
     return data;
 }
 
+vector<int> buatDataTerbalik(int n){
+    vector<int> data(n);
+    iota(data.rbegin(),data.rend(),1);
+    return data;
+}
+
